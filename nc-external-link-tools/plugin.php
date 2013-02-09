@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: TODO
-Plugin URI: TODO
-Description: TODO
+Plugin Name: External Link Tools
+Plugin URI: http://creativenotice.com/external-link-tools
+Description: This plugin allows you to manage external links more effectivly
 Version: 1.0
-Author: TODO
-Author URI: TODO
-Author Email: TODO
+Author: Ryan Mueller
+Author URI: http://creativenotice.com/about/
+Author Email: development@networkingcreatively.com
 License:
 
-  Copyright 2013 TODO (email@domain.com)
+  Copyright 2013 Networking Creatively, LLC. (development@networkingcreatively.com)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License, version 2, as 
@@ -27,7 +27,7 @@ License:
 */
 
 // TODO: rename this class to a proper name for your plugin
-class PluginName {
+class ncExternalLinks {
 	 
 	/*--------------------------------------------*
 	 * Constructor
@@ -102,8 +102,7 @@ class PluginName {
 	 */
 	public function plugin_textdomain() {
 	
-		// TODO: replace "plugin-name-locale" with a unique value for your plugin
-		$domain = 'plugin-name-locale';
+		$domain = 'nc-external-link-tools';
 		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
         load_textdomain( $domain, WP_LANG_DIR.'/'.$domain.'/'.$domain.'-'.$locale.'.mo' );
         load_plugin_textdomain( $domain, FALSE, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
@@ -116,7 +115,7 @@ class PluginName {
 	public function register_admin_styles() {
 	
 		// TODO:	Change 'plugin-name' to the name of your plugin
-		wp_enqueue_style( 'plugin-name-admin-styles', plugins_url( 'plugin-name/css/admin.css' ) );
+		wp_enqueue_style( 'nc-external-link-tools-admin-styles', plugins_url( 'nc-external-link-tools/css/admin.css' ) );
 	
 	} // end register_admin_styles
 
@@ -126,7 +125,7 @@ class PluginName {
 	public function register_admin_scripts() {
 	
 		// TODO:	Change 'plugin-name' to the name of your plugin
-		wp_enqueue_script( 'plugin-name-admin-script', plugins_url( 'plugin-name/js/admin.js' ) );
+		wp_enqueue_script( 'nc-external-link-tools-admin-script', plugins_url( 'nc-external-link-tools/js/admin.js' ) );
 	
 	} // end register_admin_scripts
 	
@@ -136,7 +135,7 @@ class PluginName {
 	public function register_plugin_styles() {
 	
 		// TODO:	Change 'plugin-name' to the name of your plugin
-		wp_enqueue_style( 'plugin-name-plugin-styles', plugins_url( 'plugin-name/css/display.css' ) );
+		wp_enqueue_style( 'nc-external-link-tools-plugin-styles', plugins_url( 'nc-external-link-tools/css/display.css' ) );
 	
 	} // end register_plugin_styles
 	
@@ -146,7 +145,7 @@ class PluginName {
 	public function register_plugin_scripts() {
 	
 		// TODO:	Change 'plugin-name' to the name of your plugin
-		wp_enqueue_script( 'plugin-name-plugin-script', plugins_url( 'plugin-name/js/display.js' ) );
+		wp_enqueue_script( 'nc-external-link-tools-plugin-script', plugins_url( 'nc-external-link-tools/js/display.js' ) );
 	
 	} // end register_plugin_scripts
 	
@@ -181,4 +180,4 @@ class PluginName {
 } // end class
 
 // TODO:	Update the instantiation call of your plugin to the name given at the class definition
-$plugin_name = new PluginName();
+$plugin_name = new ncExternalLinks();
